@@ -88,3 +88,32 @@ h1 {
 .projects article h2 {
   margin: 0;
 }
+
+.resume section h2 {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.resume article {
+  margin-bottom: 1.5rem;
+}
+
+.resume article h3 {
+  margin: 0;
+}
+
+.resume article ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.4rem;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.resume article ul li {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
