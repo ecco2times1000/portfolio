@@ -105,10 +105,11 @@ h1 {
 
 .resume article ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.4rem;
-  padding-left: 1.2rem;
-  list-style: disc;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 0;
 }
 
 .resume article ul li {
