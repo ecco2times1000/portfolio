@@ -2,30 +2,30 @@
     {
         "title": "Hawaii Restaurant Data Analysis",
         "year": "2026",
-        "image": "../images/hawaii.jpg",
+        "image": "https://ecco2times1000.github.io/portfolio/images/hawaii.jpg",
         "description": "Did exploritory data analysis on Hawaii's google reviews with the premise that I want to open a restaurant in Honolulu"
     },
     {
         "title": "Persuasive or Deceptive Visualization?",
         "year": "2026",
-        "image": "../images/bloomberg.png",
+        "image": "https://ecco2times1000.github.io/portfolio/images/bloomberg.png",
         "description": "Group project where I explored an NYPD complaints dataset and came up with the proposition that complaints went up after Bloomberg was elected mayor and increased poliece frisking. Also made the accompanying visual. My groupmembers made a counter to that."
     },
     {
         "title": "Atque numquam iure quaerat?",
-        "year": "2026",
+        "year": "1999",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Accusantium, reiciendis quod laboriosam perspiciatis est quasi voluptates! Tempore, ut aliquam, quisquam reiciendis molestias, placeat quaerat amet vero sapiente minus est dolorum veniam alias recusandae ab neque eum. Eum, cupiditate."
     },
     {
         "title": "Nulla minus maiores asperiores.",
-        "year": "2026",
+        "year": "1926",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Laboriosam reiciendis, qui magni repellendus earum numquam consequatur rem laudantium recusandae magnam optio expedita quae suscipit amet nulla esse, praesentium in, deleniti a mollitia pariatur. Voluptatibus pariatur mollitia animi. Ex."
     },
     {
         "title": "Accusamus earum architecto obcaecati.",
-        "year": "2026",
+        "year": "2833",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Voluptate culpa doloremque sunt ipsum pariatur nam natus quo vitae eligendi nemo veritatis, et dolore dolor repellendus eum quia consequatur. Accusamus voluptatum impedit numquam perspiciatis possimus excepturi! Quasi, voluptate quisquam."
     },
