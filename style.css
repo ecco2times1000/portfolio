@@ -154,3 +154,67 @@ input, textarea, button, select {
   font-size: 2rem; /* Makes the numbers nice and big */
   font-weight: bold;
 }
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.chart-container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.legend {
+    flex: 1;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 1em;
+    border: 1px solid currentColor;
+    padding: 1em;
+    margin: 2em 0;
+    list-style: none;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em; 
+}
+
+.swatch {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: var(--color);
+    border-radius: 50%;
+}
+
+.searchBar {
+    width: 100%;             
+    padding: 0.5em 1em;      
+    font-size: 1.2em;        
+    margin-bottom: 2em;      
+    box-sizing: border-box;
+}
+
+svg:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+
+/* Smooth transitions and click cursor for slices */
+path {
+    transition: 300ms;
+    cursor: pointer;
+}
+
+/* The highlight color for a clicked slice/legend item */
+.selected {
+    --color: oklch(60% 45% 0) !important;
+}
+.selected:is(path) {
+    fill: var(--color);
+}
