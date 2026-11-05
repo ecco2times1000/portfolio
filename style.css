@@ -135,23 +135,23 @@ input, textarea, button, select {
 
 #profile-stats dl {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-sized columns */
-  gap: 1rem; /* Adds a little space between the columns */
-  text-align: center; /* Centers the text in each column */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
 }
 
 #profile-stats dt {
-  grid-row: 1; /* Forces all the labels to stay on the first row */
+  grid-row: 1;
   font-weight: bold;
-  text-transform: uppercase; /* Optional: makes it look a bit more like a dashboard */
+  text-transform: uppercase;
   font-size: 0.8rem;
-  color: #555; /* Optional: subtle gray color for the labels */
+  color: #555;
 }
 
 #profile-stats dd {
-  grid-row: 2; /* Forces all the numbers to stay on the second row */
-  margin: 0; /* CRITICAL: browsers add a default left-margin to <dd> tags. This removes it so they center properly! */
-  font-size: 2rem; /* Makes the numbers nice and big */
+  grid-row: 2;
+  margin: 0;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -205,16 +205,125 @@ svg:has(path:hover) path:not(:hover) {
     opacity: 0.5;
 }
 
-/* Smooth transitions and click cursor for slices */
 path {
     transition: 300ms;
     cursor: pointer;
 }
 
-/* The highlight color for a clicked slice/legend item */
 .selected {
     --color: oklch(60% 45% 0) !important;
 }
 .selected:is(path) {
     fill: var(--color);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1.5em;
+  
+  border: 1px solid currentColor; 
+  
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1.5em;
+  margin: 0;
+}
+
+.stats dt {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  grid-row: 1;
+  
+  opacity: 0.7; 
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 1.8em; 
+  font-weight: 300;
+  grid-row: 2;
+  overflow-wrap: break-word; 
+}
+
+.gridlines line {
+  stroke: var(--color-text-muted, #ccc);
+  stroke-opacity: 0.3;
+}
+
+.gridlines .domain {
+  display: none;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25em 1em;
+  margin: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  color: var(--color-text-muted, #666);
+  font-weight: normal;
+  margin: 0;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: bold;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1em;
+  border: 1px solid var(--color-text-muted, #ccc);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+  display: grid; 
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: var(--color-text, black);
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+#language-breakdown {
+  min-height: 8em;
 }
