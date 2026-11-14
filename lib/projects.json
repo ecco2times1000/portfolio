@@ -3,19 +3,22 @@
         "title": "Hawaii Restaurant Data Analysis",
         "year": "2026",
         "image": "https://ecco2times1000.github.io/portfolio/images/hawaii.jpg",
-        "description": "Did exploritory data analysis on Hawaii's google reviews with the premise that I want to open a restaurant in Honolulu"
+        "description": "Did exploritory data analysis on Hawaii's google reviews with the premise that I want to open a restaurant in Honolulu",
+        "url": "https://ecco2times1000.github.io/Hawaii-Restaurant-Insights/"
     },
     {
         "title": "Persuasive or Deceptive Visualization?",
         "year": "2026",
         "image": "https://ecco2times1000.github.io/portfolio/images/bloomberg.png",
-        "description": "Group project where I explored an NYPD complaints dataset and came up with the proposition that complaints went up after Bloomberg was elected mayor and increased poliece frisking. Also made the accompanying visual. My groupmembers made a counter to that."
+        "description": "Group project where I explored an NYPD complaints dataset and came up with the proposition that complaints went up after Bloomberg was elected mayor and increased poliece frisking. Also made the accompanying visual. My groupmembers made a counter to that.",
+        "url": "https://donle727.github.io/DSC106-Project-2---NYC-City-Complaints/"
     },
     {
         "title": "BlueBike traffic",
         "year": "2026",
         "image": "https://ecco2times1000.github.io/portfolio/images/bikewatching.png",
-        "description": "Explore the arrival/departure traffic flow by time of day for the boston/cambridge BlueBike bike-share system"
+        "description": "Explore the arrival/departure traffic flow by time of day for the boston/cambridge BlueBike bike-share system",
+        "url": "https://ecco2times1000.github.io/bikewatching/"
     },
     {
         "title": "Nulla minus maiores asperiores.",
