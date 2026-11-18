@@ -222,12 +222,13 @@ path {
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 1.5em;
   
-  border: 1px solid currentColor; 
+  border: none !important; 
   
   border-radius: 0;
   box-shadow: none;
-  padding: 1.5em;
+  padding: 0 !important;
   margin: 0;
+  margin-bottom: 1em;
 }
 
 .stats dt {
@@ -235,13 +236,15 @@ path {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   grid-row: 1;
-  
+  margin-bottom: 0.2em;
   opacity: 0.7; 
 }
 
 .stats dd {
   margin: 0;
-  font-size: 1.8em; 
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.2em; 
   font-weight: 300;
   grid-row: 2;
   overflow-wrap: break-word; 
@@ -297,7 +300,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 circle {
-  transition: 200ms;
+  transition: all 200ms, r calc(var(--r) * 10ms);
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -326,4 +329,104 @@ circle.selected {
 
 #language-breakdown {
   min-height: 8em;
+}
+
+@starting-style {
+  circle {
+    r: 0;
+  }
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+#commit-progress {
+  flex: 1; 
+  margin: 0 1em;
+  accent-color: steelblue; 
+  cursor: pointer;
+}
+
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-top: 2em;
+}
+
+#files > div {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  margin-bottom: 1em;
+}
+
+#files dt {
+  grid-column: 1;
+}
+
+#files dt small {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+#files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color, steelblue); 
+  border-radius: 50%;
+}
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4em;
+}
+
+#scrolly-1 > * {
+  flex: 1;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 2rem;
+  left: 0;
+  bottom: auto;
+  height: auto; 
+  align-self: flex-start;
+  max-height: 95vh;
+}
+
+#chart svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Gives the user enough space to scroll between each commit */
+.step {
+  padding-bottom: 20vh; 
+  opacity: 0.2; /* Dims non-active steps slightly */
+  transition: opacity 250ms;
+}
+
+.step.is-active {
+  opacity: 1; /* Highlights the active step */
 }

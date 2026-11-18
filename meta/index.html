@@ -15,29 +15,39 @@
         </p>
     </header>
 
-    <div id="stats"></div>
-    <h2>Commits by time of day</h2>
-    <div id="chart"></div>
+    <div id="scrolly-1">
+        <div id="scatter-story">
+        </div>
+        
+        <div id="scatter-plot">
+            <h2>Commits by time of day</h2>
+            <div id="stats"></div>
+            <div id="chart"></div>
+            
+            <dl id="commit-tooltip" class="info tooltip" hidden>
+                <dt>Commit</dt>
+                <dd><a href="" id="commit-link" target="_blank"></a></dd>
+                <dt>Date</dt>
+                <dd id="commit-date"></dd>
+                <dt>Time</dt>
+                <dd id="commit-time"></dd>
+                <dt>Author</dt>
+                <dd id="commit-author"></dd>
+                <dt>Lines Edited</dt>
+                <dd id="commit-lines"></dd>
+            </dl>
+            <p id="selection-count">No commits selected</p>
+            <dl id="language-breakdown" class="stats"></dl>
+        </div>
+    </div>
 
-    <p id="selection-count">No commits selected</p>
-    <dl id="language-breakdown" class="stats"></dl>
+    <label style="display: flex; align-items: baseline; margin-bottom: 1em;">
+        Show commits until:
+        <input type="range" id="commit-progress" min="0" max="100" value="100">
+        <time id="selectedTime" style="margin-left: auto;"></time>
+    </label>
 
-    <dl id="commit-tooltip" class="info tooltip" hidden>
-        <dt>Commit</dt>
-        <dd><a href="" id="commit-link" target="_blank"></a></dd>
-
-        <dt>Date</dt>
-        <dd id="commit-date"></dd>
-
-        <dt>Time</dt>
-        <dd id="commit-time"></dd>
-
-        <dt>Author</dt>
-        <dd id="commit-author"></dd>
-
-        <dt>Lines Edited</dt>
-        <dd id="commit-lines"></dd>
-    </dl>
+    <dl id="files"></dl>
 
     <script type="module" src="main.js"></script>
 </body>
